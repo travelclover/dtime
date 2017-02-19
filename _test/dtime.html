@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dtime-test</title>
+	<style>
+	html{width:3000px;}
+	*{margin: 0;padding:0;}
+	ul, li{list-style: none;}
+	.dtime_wrap{
+		width: 80px;
+		height: 132px;
+		overflow: hidden;
+		border:1px solid #ccc;
+		background-color:#fff;
+		user-select:none;
+		z-index:99999999;
+		display:none;
+	}
+	.dtime_wrap .dtime_hour{
+		width:34px;
+		height:132px;
+		float:left;
+		background:#f5f5f5;
+		overflow: hidden;
+	}
+	.dtime_wrap .dtime_spaceMark{
+		width:10px;
+		height:132px;
+		line-height: 132px;
+		border-left:1px solid #ccc;
+		border-right:1px solid #ccc;
+		float:left;
+		font-size: 12px;
+		font-family: "微软雅黑";
+		font-weight: bolder;
+		text-align: center;
+	}
+	.dtime_wrap .dtime_minutes{
+		width:34px;
+		height:132px;
+		float:right;
+		overflow: hidden;
+		background:#f5f5f5;
+	}
+	.dtime_wrap .dtime_hour .dtime_hour_list, .dtime_wrap .dtime_minutes .dtime_minutes_list{
+		width:34px;
+	}
+	.dtime_wrap .dtime_hour .dtime_hour_list_wrap, .dtime_wrap .dtime_minutes .dtime_minutes_list_wrap{
+		width: 54px;
+		height: 132px;
+		overflow-y:scroll;
+	}
+	.dtime_wrap .dtime_hour .dtime_hour_list li, .dtime_wrap .dtime_minutes .dtime_minutes_list li{
+		width:34px;
+		height:22px;
+		line-height: 22px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.dtime_wrap .dtime_hour .dtime_hour_list li.selected, .dtime_wrap .dtime_minutes .dtime_minutes_list li.selected{
+		background-color:#c5c5c5;
+		font-weight: 900;
+	}
+	.dtime_wrap .dtime_hour .dtime_hour_list li:hover, .dtime_wrap .dtime_minutes .dtime_minutes_list li:hover{
+		background-color: #dcdcdc;
+	}
+
+
+	.div1{width:100px;height:20px;border:1px solid #000;}
+	.div2{width: 200px;height:200px;border:1px solid red;overflow-y:scroll;}
+	</style>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="div1" onclick="dtime()"></div>
+	<br>
+	<br>
+	<input type="text" onfocus="dtime()">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="div2">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<input type="text" onfocus="dtime()">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<input type="text" onfocus="dtime()">
+	<!-- <div class="dtime_wrap" id="dd">
+		<div class="dtime_hour">
+			<div class="dtime_hour_list_wrap">
+				<ul class="dtime_hour_list">
+					<li>00</li>
+					<li>01</li>
+					<li>02</li>
+					<li>03</li>
+					<li>04</li>
+					<li>05</li>
+					<li>06</li>
+					<li>07</li>
+					<li>08</li>
+					<li>09</li>
+					<li>10</li>
+					<li>11</li>
+					<li>12</li>
+					<li>13</li>
+					<li>14</li>
+					<li>15</li>
+					<li>16</li>
+					<li>17</li>
+					<li>18</li>
+					<li>19</li>
+					<li>20</li>
+					<li>21</li>
+					<li>22</li>
+					<li>23</li>
+				</ul>
+			</div>
+		</div>
+		<div class="dtime_spaceMark">
+			:
+		</div>
+		<div class="dtime_minutes">
+			<div class="dtime_minutes_list_wrap">
+				<ul class="dtime_minutes_list">
+					<li>00</li>
+					<li>01</li>
+					<li>02</li>
+					<li>03</li>
+					<li>04</li>
+					<li>05</li>
+					<li>06</li>
+					<li>07</li>
+					<li>08</li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
+
+	<br>
+	<br>
+	<br>
+	<br>
+	   adadasdadsadasdaasdadasdadasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd<input type="text" onfocus="dtime()">
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="div_click" style="border:1px solid blue;width:100px;height:100px"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="div1" onmouseover="dtime()" ="dtime()"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<script type="text/javascript" src="../dtime.js"></script>
+	<script type="text/javascript">
+	window.onload = function(){
+		// window.onclick = function(){
+		// 	alert("haha")
+		// }
+		
+		document.getElementById("div_click").addEventListener("click", function(){alert("hahah")},false)
+	}
+	</script>
+</body>
+</html>
